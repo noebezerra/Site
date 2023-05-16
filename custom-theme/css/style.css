@@ -1,0 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+:target {
+  scroll-margin-top: 0.8em;
+}
+body {
+  background: #fefbe9;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+h1 {
+  font-family: 'Bebas Neue', serif;
+  color: #212a3e;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+h1.title {
+  margin-bottom: 32px;
+}
+.main h1 {
+  color: #73a9ad;
+  font-size: 8rem;
+  line-height: 12rem;
+}
+.main h1 span {
+  color: #fefbe9;
+}
+h2 {
+  color: #fefbe9;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.015rem;
+}
+p {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.015rem;
+}
+.container {
+  /* max-width: 940px; */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* MENU */
+header {
+  background: #1b2430;
+  height: 100%;
+  grid-area: 1 / 2 / -1 / -1;
+}
+nav.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  padding: 0 100px;
+}
+nav.menu ul {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 17px;
+  margin: 0;
+  position: relative;
+}
+nav.menu ul::before {
+  content: '';
+  height: 325px;
+  width: 2px;
+  background: #fefbe9;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+nav.menu ul li {
+  list-style: none;
+  align-items: center;
+  color: #fefbe9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: 'Bebas Neue', serif;
+}
+nav.menu ul li::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background: #fff;
+  position: absolute;
+  left: -20px;
+}
+nav.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+nav.menu ul li:hover a {
+  color: #f94a29;
+  transition: all 0.3s ease-out;
+}
+nav.menu ul li:hover::before {
+  width: 12px;
+  height: 12px;
+  background: #f94a29;
+  left: -22px;
+  transition: all 0.3s ease-out;
+}
+/* HOME */
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background: #1b2430;
+}
+.main .identidade {
+  padding: 0 20px;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.scroll-down img {
+  width: 20px;
+  height: 40px;
+  margin: 0 auto;
+}
+.scroll-down p {
+  color: #141b24;
+}
+/* SOBRE */
+#sobre {
+  padding-top: 120px;
+  min-height: calc(100vh - 120px);
+}
+/* HABILIDADES */
+#habilidades {
+  padding-top: 120px;
+  position: relative;
+  min-height: calc(100vh - 120px);
+}
+#habilidades::before {
+  content: '';
+  background: url('../imgs/detail.svg') center center no-repeat;
+  width: 486px;
+  height: 360px;
+  position: absolute;
+  transform: rotate(180deg);
+  background-size: cover;
+  box-sizing: border-box;
+  z-index: -999;
+  top: 60px;
+  left: -180px;
+}
+.lista-habilidades {
+  padding: 0;
+  margin: 0;
+}
+.lista-habilidades li {
+  list-style: none;
+}
+.lista-habilidades li:nth-child(1)::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f5f0bb;
+  position: absolute;
+  top: 0;
+}
+.lista-habilidades li {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  position: relative;
+}
+.lista-habilidades li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f5f0bb;
+  position: absolute;
+  bottom: 0;
+}
+.lista-habilidades li p {
+  display: inline-block;
+}
+.lista-habilidades li .nivel {
+  width: 8px;
+  height: 8px;
+  background: #f5f0bb;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f5f0bb,
+    calc(-68px * 5) 0 0 #f5f0bb, calc(-68px * 6) 0 0 #f5f0bb,
+    calc(-68px * 7) 0 0 #f5f0bb, calc(-68px * 8) 0 0 #f5f0bb,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-2 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f5f0bb,
+    calc(-68px * 5) 0 0 #f5f0bb, calc(-68px * 6) 0 0 #f5f0bb,
+    calc(-68px * 7) 0 0 #f5f0bb, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-3 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f5f0bb,
+    calc(-68px * 5) 0 0 #f5f0bb, calc(-68px * 6) 0 0 #f5f0bb,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-4 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f5f0bb,
+    calc(-68px * 5) 0 0 #f5f0bb, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-5 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f5f0bb,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-6 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f5f0bb, calc(-68px * 4) 0 0 #f94a29,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-7 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f5f0bb,
+    calc(-68px * 3) 0 0 #f94a29, calc(-68px * 4) 0 0 #f94a29,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-8 {
+  box-shadow: calc(-68px) 0 0 #f5f0bb, calc(-68px * 2) 0 0 #f94a29,
+    calc(-68px * 3) 0 0 #f94a29, calc(-68px * 4) 0 0 #f94a29,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-9 {
+  box-shadow: calc(-68px) 0 0 #f94a29, calc(-68px * 2) 0 0 #f94a29,
+    calc(-68px * 3) 0 0 #f94a29, calc(-68px * 4) 0 0 #f94a29,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+.lista-habilidades li .nivel.nivel-10 {
+  background-color: #f94a29;
+  box-shadow: calc(-68px) 0 0 #f94a29, calc(-68px * 2) 0 0 #f94a29,
+    calc(-68px * 3) 0 0 #f94a29, calc(-68px * 4) 0 0 #f94a29,
+    calc(-68px * 5) 0 0 #f94a29, calc(-68px * 6) 0 0 #f94a29,
+    calc(-68px * 7) 0 0 #f94a29, calc(-68px * 8) 0 0 #f94a29,
+    calc(-68px * 9) 0 0 #f94a29;
+}
+/* EXPERIENCIA */
+#experiencia {
+  padding-top: 120px;
+  position: relative;
+  min-height: calc(100vh - 120px);
+}
+#experiencia::before {
+  content: '';
+  background: url('../imgs/detail.svg') center center no-repeat;
+  width: 31px;
+  height: 23px;
+  position: absolute;
+  background-size: cover;
+  box-sizing: border-box;
+  z-index: -999;
+  top: 90px;
+  right: 0;
+}
+.lista-experiencia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+.lista-experiencia ul {
+  margin: 0;
+  padding: 0;
+}
+.lista-experiencia ul li {
+  list-style: none;
+  position: relative;
+  padding-bottom: 18px;
+}
+.lista-experiencia ul li:nth-child(n + 2) {
+  padding-top: 4px;
+}
+.lista-experiencia ul li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f5f0bb;
+  position: absolute;
+  bottom: 0;
+}
+.lista-experiencia ul li h3 {
+  padding-bottom: 28px;
+}
+/* FOOTER */
+footer {
+  padding-top: 120px;
+  text-align: center;
+  position: relative;
+  height: 128px;
+  overflow: hidden;
+}
+footer::before {
+  content: '';
+  background: url('../imgs/detail.svg') center center no-repeat;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  background-size: cover;
+  box-sizing: border-box;
+  transform: rotate(90deg);
+  z-index: -999;
+  bottom: -16px;
+  right: 90px;
+}
+footer .line {
+  width: 550px;
+  height: 2px;
+  background: #f5f0bb;
+  margin: 0 auto 34px;
+}
+footer .redes-sociais {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 60px;
+  padding: 0;
+}
+footer .redes-sociais li {
+  padding: 0 8px;
+}
